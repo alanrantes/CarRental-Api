@@ -61,7 +61,7 @@ O sistema permite o controle completo de fabricantes, categorias de veículos, v
 
 ## 🔗 Endpoints Principais
 
-### 📁 Veículos
+### Veículos
 
 | Método | Rota                                           | Descrição                         |
 |--------|------------------------------------------------|----------------------------------|
@@ -76,7 +76,7 @@ O sistema permite o controle completo de fabricantes, categorias de veículos, v
 
 ---
 
-### 📄 Aluguéis
+### Aluguéis
 
 | Método | Rota                                  | Descrição                          |
 |--------|----------------------------------------|-----------------------------------|
