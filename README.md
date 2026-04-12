@@ -4,11 +4,8 @@
 ![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-512BD4?style=flat&logo=dotnet&logoColor=white)
 ![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=flat&logo=microsoftsqlserver&logoColor=white)
 
-<p align="justify">
-API REST para gerenciamento de uma locadora de veículos, desenvolvida em C# com ASP.NET Core Web API e integrada ao SQL Server por meio do Entity Framework Core.</p>
-
-<p align="justify">O sistema permite o controle completo de fabricantes, categorias de veículos, veículos, clientes e operações de aluguel. O projeto implementa operações CRUD, validações de dados e consultas avançadas utilizando joins entre tabelas, simulando um cenário real de backend.
-</p>
+<p align="justify">API REST desenvolvida em C# com ASP.NET Core para gerenciamento de uma locadora de veículos, integrada ao SQL Server por meio do Entity Framework Core. O sistema contempla operações CRUD, aplicação de regras de negócio e consultas avançadas com JOINs entre tabelas, simulando um cenário real de backend..</p>
+<p align="justify">O sistema permite o controle de fabricantes, categorias, veículos, clientes e aluguéis, com tratamento de relacionamentos entre entidades, validações de integridade e documentação de endpoints via Swagger.</p>
 
 ---
 
@@ -63,6 +60,14 @@ As etapas detalhadas do projeto podem ser acessadas abaixo:
 
 - [Documentos](docs/01-Introducao.md)
 ---
+
+## 📦 Estrutura do Projeto
+
+- Controllers
+- Models
+- Data (DbContext)
+- Migrations
+- Configuração (Program.cs / appsettings.json)
 
 ## 🔗 Endpoints Principais
 
