@@ -5,9 +5,9 @@
 ![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=flat&logo=microsoftsqlserver&logoColor=white)
 
 <p align="justify">
-API REST para gerenciamento de uma locadora de veículos, desenvolvida em C# com ASP.NET Core Web API e integrada ao SQL Server por meio do Entity Framework Core.
+API REST para gerenciamento de uma locadora de veículos, desenvolvida em C# com ASP.NET Core Web API e integrada ao SQL Server por meio do Entity Framework Core.</p>
 
-O sistema permite o controle completo de fabricantes, categorias de veículos, veículos, clientes e operações de aluguel. O projeto implementa operações CRUD, validações de dados e consultas avançadas utilizando joins entre tabelas, simulando um cenário real de backend.
+<p align="justify">O sistema permite o controle completo de fabricantes, categorias de veículos, veículos, clientes e operações de aluguel. O projeto implementa operações CRUD, validações de dados e consultas avançadas utilizando joins entre tabelas, simulando um cenário real de backend.
 </p>
 
 ---
