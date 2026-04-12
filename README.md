@@ -57,6 +57,19 @@ O sistema permite o controle completo de fabricantes, categorias de veículos, v
 - Buscar aluguéis por veículo
 - Listar aluguéis em aberto
 
+## Documentação
+
+- [Introdução](docs/01-Introducao.md)
+- [Requisitos Funcionais](docs/02-Requisitos-Funcionais.md)
+- [Arquitetura do Sistema](docs/03-Arquitetura-do-Sistema.md)
+- [Implementação Técnica](docs/04-Implementacao-Tecnica.md)
+- [Descrição do Banco de Dados](docs/05-Descricao-Banco.md)
+- [Testes e Validação](docs/06-Testes-e-Validacao.md)
+- [Resultados e Conclusões](docs/07-Resultados-e-Conclusoes.md)
+- [Considerações Finais](docs/08-Consideracoes-Finais.md)
+- [Referências](docs/09-Referencias.md)
+- [Apêndices](docs/10-Apendices.md)
+
 ---
 
 ## 🔗 Endpoints Principais
@@ -88,16 +101,6 @@ O sistema permite o controle completo de fabricantes, categorias de veículos, v
 | POST   | /api/alugueis                          | Cria um aluguel                   |
 | PUT    | /api/alugueis/{id}                     | Atualiza aluguel                  |
 | DELETE | /api/alugueis/{id}                     | Remove aluguel                    |
-
----
-
-## 📦 Estrutura do Projeto
-
-- Controllers
-- Models
-- Data (DbContext)
-- Migrations
-- Configuração (Program.cs / appsettings.json)
 
 ---
 
@@ -136,29 +139,3 @@ Caso não abra, acesse manualmente:
 
 ## Testes
 Os endpoints foram testados utilizando o Swagger, permitindo a validação completa das operações de CRUD e dos filtros com joins entre tabelas.
-
-## Aprendizado
-Durante o desenvolvimento deste projeto, foram aplicados conceitos como
-
-- Desenvolvimento de APIs RESTful com ASP.NET Core
-- Modelagem de banco de dados relacional
-- Uso do Entity Framework Core (ORM)
-- Implementação de CRUD completo
-- Validação de dados e tratamento de erros
-- Uso de joins em consultas (inner join e left join)
-- Organização e estruturação de projetos backend
-
-
-
-## Etapas do Projeto
-
-- [Introdução](docs/01-Introducao.md)
-- [Requisitos Funcionais](docs/02-Requisitos-Funcionais.md)
-- [Arquitetura do Sistema](docs/03-Arquitetura-do-Sistema.md)
-- [Implementação Técnica](docs/04-Implementacao-Tecnica.md)
-- [Descrição do Banco de Dados](docs/05-Descricao-Banco.md)
-- [Testes e Validação](docs/06-Testes-e-Validacao.md)
-- [Resultados e Conclusões](docs/07-Resultados-e-Conclusoes.md)
-- [Considerações Finais](docs/08-Consideracoes-Finais.md)
-- [Referências](docs/09-Referencias.md)
-- [Apêndices](docs/10-Apendices.md)
