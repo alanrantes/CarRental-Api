@@ -103,6 +103,8 @@ O sistema permite o controle completo de fabricantes, categorias de veículos, v
 
 ## 📄 Exemplo de Aluguel (JSON)
 
+Outros exemplos de requisições estão disponíveis nos [Apêndices](docs/10-Apendices.md).
+
 ```json
 {
   "idAluguel": 0,
