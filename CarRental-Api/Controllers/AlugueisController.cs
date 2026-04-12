@@ -43,6 +43,86 @@ namespace CarRental_Api.Controllers
             return aluguel;
         }
 
+        // GET: api/Alugueis/por-cliente/1
+        [HttpGet("por-cliente/{idCliente}")]
+        public async Task<ActionResult<IEnumerable<object>>> GetAlugueisPorCliente(int idCliente)
+        {
+            var alugueis = await (
+                from a in _context.Alugueis
+                join c in _context.Clientes on a.IdCliente equals c.IdCliente
+                join v in _context.Veiculos on a.IdVeiculo equals v.IdVeiculo
+                where a.IdCliente == idCliente
+                select new
+                {
+                    a.IdAluguel,
+                    Cliente = c.Nome,
+                    c.Cpf,
+                    Veiculo = v.Modelo,
+                    v.Placa,
+                    a.DataRetirada,
+                    a.DataPrevistaDevolucao,
+                    a.DataDevolucao,
+                    a.ValorDiaria,
+                    a.ValorTotal,
+                    a.Status
+                }
+            ).ToListAsync();
+
+            return Ok(alugueis);
+        }
+
+        // GET: api/Alugueis/por-veiculo/1
+        [HttpGet("por-veiculo/{idVeiculo}")]
+        public async Task<ActionResult<IEnumerable<object>>> GetAlugueisPorVeiculo(int idVeiculo)
+        {
+            var alugueis = await (
+                from a in _context.Alugueis
+                join v in _context.Veiculos on a.IdVeiculo equals v.IdVeiculo
+                join c in _context.Clientes on a.IdCliente equals c.IdCliente
+                where a.IdVeiculo == idVeiculo
+                select new
+                {
+                    a.IdAluguel,
+                    Veiculo = v.Modelo,
+                    v.Placa,
+                    Cliente = c.Nome,
+                    c.Email,
+                    a.DataRetirada,
+                    a.DataPrevistaDevolucao,
+                    a.DataDevolucao,
+                    a.Status,
+                    a.ValorTotal
+                }
+            ).ToListAsync();
+
+            return Ok(alugueis);
+        }
+
+        // GET: api/Alugueis/em-aberto
+        [HttpGet("em-aberto")]
+        public async Task<ActionResult<IEnumerable<object>>> GetAlugueisEmAberto()
+        {
+            var alugueis = await (
+                from a in _context.Alugueis
+                join c in _context.Clientes on a.IdCliente equals c.IdCliente
+                join v in _context.Veiculos on a.IdVeiculo equals v.IdVeiculo
+                where a.DataDevolucao == null
+                select new
+                {
+                    a.IdAluguel,
+                    Cliente = c.Nome,
+                    Veiculo = v.Modelo,
+                    v.Placa,
+                    a.DataRetirada,
+                    a.DataPrevistaDevolucao,
+                    a.Status,
+                    a.ValorDiaria
+                }
+            ).ToListAsync();
+
+            return Ok(alugueis);
+        }
+
         // POST: api/Alugueis
         [HttpPost]
         public async Task<ActionResult<Aluguel>> PostAluguel(Aluguel aluguel)
