@@ -57,7 +57,9 @@ O sistema permite o controle completo de fabricantes, categorias de veículos, v
 - Buscar aluguéis por veículo
 - Listar aluguéis em aberto
 
-## Documentação
+## Documentação Completa
+
+As etapas detalhadas do projeto podem ser acessadas abaixo:
 
 - [Introdução](docs/01-Introducao.md)
 - [Requisitos Funcionais](docs/02-Requisitos-Funcionais.md)
