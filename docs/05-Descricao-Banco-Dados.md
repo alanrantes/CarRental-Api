@@ -134,7 +134,7 @@ A seguir, alguns exemplos de consultas relevantes para o sistema:
 
 ---
 
-### Listar veículos com fabricante e categoria
+### 🔹Listar veículos com fabricante e categoria
 
 ```sql
 SELECT v.Modelo, v.Placa, f.Nome AS Fabricante, c.Nome AS Categoria
@@ -142,7 +142,7 @@ FROM Veiculos v
 INNER JOIN Fabricantes f ON v.IdFabricante = f.IdFabricante
 INNER JOIN CategoriasVeiculo c ON v.IdCategoria = c.IdCategoria;
 ```
-### Buscar veículos disponíveis por categoria
+### 🔹Buscar veículos disponíveis por categoria
 
 ```sql
 SELECT v.Modelo, v.Placa
@@ -151,7 +151,7 @@ INNER JOIN CategoriasVeiculo c ON v.IdCategoria = c.IdCategoria
 WHERE v.Disponivel = 1 AND c.IdCategoria = 1;
 ```
 
-### Listar aluguéis com cliente e veículo
+### 🔹Listar aluguéis com cliente e veículo
 
 ```sql
 SELECT a.IdAluguel, c.Nome AS Cliente, v.Modelo, a.DataRetirada, a.ValorTotal
@@ -160,14 +160,14 @@ INNER JOIN Clientes c ON a.IdCliente = c.IdCliente
 INNER JOIN Veiculos v ON a.IdVeiculo = v.IdVeiculo;
 ```
 
-### Listar aluguéis em aberto
+### 🔹Listar aluguéis em aberto
 ```sql
 SELECT *
 FROM Alugueis
 WHERE DataDevolucao IS NULL;
 ```
 
-### Veículos com ou sem histórico de aluguel (LEFT JOIN)
+### 🔹Veículos com ou sem histórico de aluguel (LEFT JOIN)
 
 ```sql
 SELECT v.Modelo, a.IdAluguel
@@ -177,5 +177,5 @@ LEFT JOIN Alugueis a ON v.IdVeiculo = a.IdVeiculo;
 
 ## Considerações
 
-<p align="justify">O modelo de dados foi projetado de forma a refletir as regras de negócio da locadora, garantindo integridade, organização e facilidade de manutenção.</p>
-<p align="justify">A utilização de relacionamentos bem definidos e consultas com joins permite a recuperação eficiente de dados, possibilitando a construção de funcionalidades mais completas e realistas dentro da aplicação.</p>
+<p align="justify">O modelo de dados foi projetado de forma a refletir as regras de negócio da locadora, garantindo integridade, organização e facilidade de manutenção.A utilização
+de relacionamentos bem definidos e consultas com joins permite a recuperação eficiente de dados, possibilitando a construção de funcionalidades mais completas e realistas dentro da aplicação.</p>
