@@ -33,7 +33,7 @@ O projeto foi organizado de forma modular, seguindo boas práticas de desenvolvi
 
 ## Modelo de Dados
 
-### Esquema Relacional
+### Modelo Conceitual
 
 <p align="justify">
 O sistema foi modelado com base em um banco de dados relacional, no qual as entidades estão interligadas por meio de chaves primárias e estrangeiras, garantindo a integridade dos dados.
