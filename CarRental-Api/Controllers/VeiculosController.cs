@@ -43,6 +43,76 @@ namespace CarRental_Api.Controllers
             return veiculo;
         }
 
+        // GET: api/Veiculos/com-detalhes
+        [HttpGet("com-detalhes")]
+        public async Task<ActionResult<IEnumerable<object>>> GetVeiculosComDetalhes()
+        {
+            var veiculos = await (
+                from v in _context.Veiculos
+                join f in _context.Fabricantes on v.IdFabricante equals f.IdFabricante
+                join c in _context.CategoriasVeiculo on v.IdCategoria equals c.IdCategoria
+                select new
+                {
+                    v.IdVeiculo,
+                    v.Modelo,
+                    v.AnoFabricacao,
+                    v.Quilometragem,
+                    v.Placa,
+                    v.Cor,
+                    v.Disponivel,
+                    Fabricante = f.Nome,
+                    Categoria = c.Nome,
+                    c.ValorDiariaBase
+                }
+            ).ToListAsync();
+
+            return Ok(veiculos);
+        }
+
+        // GET: api/Veiculos/disponiveis-por-categoria/1
+        [HttpGet("disponiveis-por-categoria/{idCategoria}")]
+        public async Task<ActionResult<IEnumerable<object>>> GetVeiculosDisponiveisPorCategoria(int idCategoria)
+        {
+            var veiculos = await (
+                from v in _context.Veiculos
+                join c in _context.CategoriasVeiculo on v.IdCategoria equals c.IdCategoria
+                where v.Disponivel == true && v.IdCategoria == idCategoria
+                select new
+                {
+                    v.IdVeiculo,
+                    v.Modelo,
+                    v.Placa,
+                    v.Cor,
+                    v.Quilometragem,
+                    Categoria = c.Nome
+                }
+            ).ToListAsync();
+
+            return Ok(veiculos);
+        }
+
+        // GET: api/Veiculos/com-historico-aluguel
+        [HttpGet("com-historico-aluguel")]
+        public async Task<ActionResult<IEnumerable<object>>> GetVeiculosComHistoricoAluguel()
+        {
+            var resultado = await (
+                from v in _context.Veiculos
+                join a in _context.Alugueis on v.IdVeiculo equals a.IdVeiculo into alugueisGroup
+                from a in alugueisGroup.DefaultIfEmpty()
+                select new
+                {
+                    v.IdVeiculo,
+                    v.Modelo,
+                    v.Placa,
+                    IdAluguel = a != null ? a.IdAluguel : (int?)null,
+                    DataRetirada = a != null ? a.DataRetirada : (DateTime?)null,
+                    Status = a != null ? a.Status : "Sem histórico de aluguel"
+                }
+            ).ToListAsync();
+
+            return Ok(resultado);
+        }
+
         // POST: api/Veiculos
         [HttpPost]
         public async Task<ActionResult<Veiculo>> PostVeiculo(Veiculo veiculo)
