@@ -123,11 +123,12 @@ Outros exemplos de requisições estão disponíveis nos [Apêndices](docs/10-Ap
 2. Abra a solução no Visual Studio
 3. Configure a string de conexão com o SQL Server no arquivo appsettings.json (caso necessário)
 4. Execute o projeto
-O Swagger será aberto automaticamente no navegador.
-Caso não abra, acesse manualmente:
+
+O Swagger será aberto automaticamente no navegador. Caso não abra, acesse manualmente:
 
    ```bash
    https://localhost:xxxx/swagger
+   ```
 
 ## Testes
 Os endpoints foram testados utilizando o Swagger, permitindo a validação completa das operações de CRUD e dos filtros com joins entre tabelas.
