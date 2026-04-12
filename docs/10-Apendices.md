@@ -80,6 +80,7 @@ Esta seção apresenta exemplos de requisições utilizadas para testar os endpo
   "idVeiculo": 1
 }
 ```
+---
 
 ### Observações
 
