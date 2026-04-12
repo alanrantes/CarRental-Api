@@ -40,7 +40,7 @@ O sistema foi modelado com base em um banco de dados relacional, no qual as enti
 </p>
 
 <p align="center">
-  <img src="images/Modelo_Conceitual.png" alt="Modelo Conceitual" />
+  <img src="images/modelo_conceitual.png" alt="Modelo Conceitual" />
 </p>
 
 ---
