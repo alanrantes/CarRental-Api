@@ -136,4 +136,4 @@ O Swagger será aberto automaticamente no navegador. Caso não abra, acesse manu
    ```
 
 ## Testes
-Os endpoints foram testados utilizando o Swagger, permitindo a validação completa das operações de CRUD e dos filtros com joins entre tabelas.
+Os endpoints estão em fase de testes via Swagger, com validação contínua de operações CRUD e consultas com JOINs.
