@@ -103,7 +103,7 @@ As etapas detalhadas do projeto podem ser acessadas abaixo:
 
 ## 📄 Exemplo de Aluguel (JSON)
 
-Outros exemplos de requisições estão disponíveis nos [Apêndices](docs/10-Apendices.md).
+Outros exemplos de requisições estão disponíveis nos [Apendices](docs/10-Apendices.md).
 
 ```json
 {
