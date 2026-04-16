@@ -3,6 +3,7 @@
 ![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=c-sharp&logoColor=white)
 ![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-512BD4?style=flat&logo=dotnet&logoColor=white)
 ![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=flat&logo=microsoftsqlserver&logoColor=white)
+![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=flat&logo=swagger&logoColor=black)
 
 <p align="justify">API REST desenvolvida em C# com ASP.NET Core para gerenciamento de uma locadora de veículos, integrada ao SQL Server por meio do Entity Framework Core. O sistema contempla operações CRUD, aplicação de regras de negócio e consultas avançadas com JOINs entre tabelas, simulando um cenário real de backend..</p>
 <p align="justify">O sistema permite o controle de fabricantes, categorias, veículos, clientes e aluguéis, com tratamento de relacionamentos entre entidades, validações de integridade e documentação de endpoints via Swagger.</p>
