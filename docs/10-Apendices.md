@@ -1,41 +1,57 @@
 #  Apêndices
 
-## 📄 Exemplos de Requisições JSON
+## 📄 Exemplos de Requisições JSON Utilizadas nos Testes
 
-Esta seção apresenta exemplos de requisições utilizadas para testar os endpoints da API.
+Esta seção apresenta exemplos de requisições utilizadas para testar os endpoints da API, contemplando operações de cadastro (POST) e atualização (PUT).
 
 ---
 
-### 🏭 Fabricante
+### 🔹Fabricante
 
 **POST** `/api/Fabricantes`
 
 ```json
 {
-  "idFabricante": 0,
   "nome": "Toyota",
   "paisOrigem": "Japão"
 }
 ```
-### 🏷️ Categoria de Veículo
+**PUT** `/api/Fabricantes/{id}`
+
+```json
+{
+  "idFabricante": 1,
+  "nome": "Toyota Atualizada",
+  "paisOrigem": "Japão"
+}
+```
+
+### 🔹Categoria de Veículo
 
 **POST** `/api/CategoriasVeiculo`
 
 ```json
 {
-  "idCategoria": 0,
   "nome": "SUV",
   "valorDiariaBase": 150.00
 }
 ```
+**PUT** `/api/CategoriasVeiculo/{id}`
 
-### 🚗 Veículo
+```json
+{
+  "idCategoria": 1,
+  "nome": "SUV Premium",
+  "valorDiariaBase": 180.00
+}
+```
+
+### 🔹Veículo
 
 **POST** `/api/Veiculos`
 
 ```json
 {
-  "idVeiculo": 0,
   "modelo": "Corolla",
   "anoFabricacao": 2022,
   "quilometragem": 25000,
@@ -47,44 +63,54 @@ Esta seção apresenta exemplos de requisições utilizadas para testar os endpo
 }
 ```
 
-### 👤 Cliente
+**PUT** `/api/Veiculos/{id}`
+
+```json
+{
+  "idVeiculo": 1,
+  "modelo": "Corolla Atualizado",
+  "anoFabricacao": 2022,
+  "quilometragem": 26000,
+  "placa": "ABC1234",
+  "cor": "Preto",
+  "disponivel": true,
+  "idFabricante": 1,
+  "idCategoria": 1
+}
+```
+
+### 🔹Cliente
 
 **POST** `/api/Clientes`
 
 ```json
 {
-  "idCliente": 0,
-  "nome": "Alan Lacerda",
+  "nome": "Matheus Henrique",
   "cpf": "12345678900",
-  "email": "alan@email.com",
+  "email": "matheus.henrique@gmail.com",
   "telefone": "31999999999"
 }
 ```
-
-### 📄 Aluguel
-
-**POST** `/api/Alugueis`
+**PUT** `/api/Clientes/{id}`
 
 ```json
 {
-  "idAluguel": 0,
-  "dataRetirada": "2026-04-12T10:00:00",
-  "dataPrevistaDevolucao": "2026-04-15T10:00:00",
-  "dataDevolucao": null,
-  "quilometragemInicial": 25000,
-  "quilometragemFinal": null,
-  "valorDiaria": 150.00,
-  "valorTotal": 450.00,
-  "status": "Ativo",
   "idCliente": 1,
-  "idVeiculo": 1
+  "nome": "Matheus Henrique Atualizado",
+  "cpf": "12345678900",
+  "email": "matheushr.atualizado@gmail.com",
+  "telefone": "31999999999"
 }
 ```
 ---
 
 ### Observações
 
-- Os campos de ID (`idFabricante`, `idCategoria`, etc.) são gerados automaticamente pelo banco de dados.
-- Os valores de chave estrangeira (`idCliente`, `idVeiculo`, etc.) devem existir previamente no banco.
-- Datas seguem o padrão ISO 8601 (`yyyy-MM-ddTHH:mm:ss`).
-- Campos como dataDevolucao e `quilometragemFinal` podem ser null no momento da criação do aluguel.
+- Os campos de ID (`idFabricante`, `idCategoria`, `idCliente`, etc.) são gerados automaticamente pelo banco de dados e **não devem ser enviados nas requisições POST**.
+- Nas requisições PUT, o ID deve ser informado tanto na URL quanto no corpo da requisição.
+- Os valores de chave estrangeira (`idFabricante`, `idCategoria`, etc.) devem existir previamente no banco de dados.
+- As requisições utilizam apenas os identificadores das entidades relacionadas, evitando o envio de objetos completos e prevenindo conflitos com o Entity Framework.
+- As datas seguem o padrão ISO 8601 (`yyyy-MM-ddTHH:mm:ss`).
+- Durante os testes, foi necessário ajustar as propriedades de navegação das entidades para evitar erros de validação e inconsistências nos relacionamentos.
+
+Os exemplos apresentados nesta seção foram utilizados durante a execução dos testes descritos na seção de Testes e Validação.
