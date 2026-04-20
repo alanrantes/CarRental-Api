@@ -113,4 +113,4 @@ Esta seção apresenta exemplos de requisições utilizadas para testar os endpo
 - As datas seguem o padrão ISO 8601 (`yyyy-MM-ddTHH:mm:ss`).
 - Durante os testes, foi necessário ajustar as propriedades de navegação das entidades para evitar erros de validação e inconsistências nos relacionamentos.
 
-Os exemplos apresentados nesta seção foram utilizados durante a execução dos testes descritos na seção de Testes e Validação.
+Os exemplos apresentados nesta seção foram utilizados durante a execução dos testes descritos na seção [Testes e Validação](docs/06-Testes-Validacao.md).
