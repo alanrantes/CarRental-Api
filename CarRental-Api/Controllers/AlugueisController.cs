@@ -138,22 +138,16 @@ namespace CarRental_Api.Controllers
                 return BadRequest("Cliente informado não existe.");
             }
 
-            var veiculo = await _context.Veiculos.FindAsync(aluguel.IdVeiculo);
-            if (veiculo == null)
+            var veiculoExiste = await _context.Veiculos.AnyAsync(v => v.IdVeiculo == aluguel.IdVeiculo);
+            if (!veiculoExiste)
             {
                 return BadRequest("Veículo informado não existe.");
             }
 
-            if (!veiculo.Disponivel)
-            {
-                return BadRequest("O veículo informado não está disponível para aluguel.");
-            }
+            aluguel.Cliente = null;
+            aluguel.Veiculo = null;
 
             _context.Alugueis.Add(aluguel);
-
-            veiculo.Disponivel = false;
-            _context.Veiculos.Update(veiculo);
-
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetAluguel), new { id = aluguel.IdAluguel }, aluguel);

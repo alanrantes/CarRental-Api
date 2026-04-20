@@ -134,12 +134,14 @@ namespace CarRental_Api.Controllers
                 return BadRequest("Categoria informada não existe.");
             }
 
+            veiculo.Fabricante = null;
+            veiculo.CategoriaVeiculo = null;
+
             _context.Veiculos.Add(veiculo);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetVeiculo), new { id = veiculo.IdVeiculo }, veiculo);
         }
-
         // PUT: api/Veiculos/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutVeiculo(int id, Veiculo veiculo)

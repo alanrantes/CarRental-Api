@@ -28,16 +28,18 @@ namespace CarRental_Api.Models
         public decimal ValorTotal { get; set; }
 
         [Required]
-        public string Status { get; set; }
+        public string Status { get; set; } = string.Empty;
 
+        [Required]
         public int IdCliente { get; set; }
 
         [ForeignKey("IdCliente")]
-        public Cliente Cliente { get; set; }
+        public Cliente? Cliente { get; set; }
 
+        [Required]
         public int IdVeiculo { get; set; }
 
         [ForeignKey("IdVeiculo")]
-        public Veiculo Veiculo { get; set; }
+        public Veiculo? Veiculo { get; set; }
     }
 }

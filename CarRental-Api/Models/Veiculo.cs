@@ -9,7 +9,7 @@ namespace CarRental_Api.Models
         public int IdVeiculo { get; set; }
 
         [Required]
-        public string Modelo { get; set; }
+        public string Modelo { get; set; } = string.Empty;
 
         [Required]
         public int AnoFabricacao { get; set; }
@@ -18,7 +18,7 @@ namespace CarRental_Api.Models
         public int Quilometragem { get; set; }
 
         [Required]
-        public string Placa { get; set; }
+        public string Placa { get; set; } = string.Empty;
 
         public string? Cor { get; set; }
 
@@ -26,15 +26,17 @@ namespace CarRental_Api.Models
         public bool Disponivel { get; set; }
 
         // FK Fabricante
+        [Required]
         public int IdFabricante { get; set; }
 
         [ForeignKey("IdFabricante")]
-        public Fabricante Fabricante { get; set; }
+        public Fabricante? Fabricante { get; set; }
 
         // FK Categoria
+        [Required]
         public int IdCategoria { get; set; }
 
         [ForeignKey("IdCategoria")]
-        public CategoriaVeiculo CategoriaVeiculo { get; set; }
+        public CategoriaVeiculo? CategoriaVeiculo { get; set; }
     }
 }
