@@ -26,55 +26,53 @@ Foram testados os principais cadastros do sistema:
 
 ---
 
-##  Teste: Cadastro de Fabricante
+## 🔹Teste: Cadastro de Fabricante
 
 **Endpoint testado:** `POST /api/Fabricantes`
 
 **Objetivo:** validar o cadastro de um fabricante no banco de dados.
 
-<p align="center">
-  <img src="images/teste-post-fabricante.png" alt="Teste POST Fabricante" />
-</p>
+![Teste - Fabricante](images/teste_fabricante.png)
 
 ---
 
-## 🏷️ Teste: Cadastro de Categoria de Veículo
+## 🔹Teste: Cadastro de Categoria de Veículo
 
 **Endpoint testado:** `POST /api/CategoriasVeiculo`
 
 **Objetivo:** validar o cadastro de uma categoria de veículo com valor base de diária.
 
-![](images/)
+![Teste - Categoria](images/teste_categoria.png)
 ---
 
-## 🚗 Teste: Cadastro de Veículo
+## 🔹Teste: Cadastro de Veículo
 
 **Endpoint testado:** `POST /api/Veiculos`
 
 **Objetivo:** validar o cadastro de um veículo vinculado a um fabricante e a uma categoria.
 
-![](images/)
+![Teste - Veiculo](images/teste_veiculo.png)
 ---
 
-## 👤 Teste: Cadastro de Cliente
+## 🔹Teste: Cadastro de Cliente
 
 **Endpoint testado:** `POST /api/Clientes`
 
 **Objetivo:** validar o cadastro de um cliente com nome, CPF, e-mail e telefone.
 
-![](images/)
+![Teste - Cliente](images/teste_cliente.png)
 ---
 
-## 📄 Teste: Cadastro de Aluguel
+## 🔹Teste: Cadastro de Aluguel
 
 **Endpoint testado:** `POST /api/Alugueis`
 
 **Objetivo:** validar o registro de um aluguel relacionando cliente e veículo existentes no banco de dados.
 
-![](images/)
+![Teste - Aluguel](images/teste_aluguel.png)
 ---
 
-## 🔍 Validação dos Resultados
+##  🔹Validação dos Resultados
 
 Durante os testes, foi possível verificar que os endpoints responderam corretamente às requisições enviadas, retornando códigos HTTP adequados, como:
 
