@@ -2,9 +2,9 @@
 
 ## Análise dos Resultados
 
-O desenvolvimento do sistema de locadora de veículos permitiu a implementação completa de uma API RESTful funcional, atendendo aos principais requisitos definidos nas etapas iniciais do projeto.
+<p align="justify">O desenvolvimento do sistema de locadora de veículos permitiu a implementação completa de uma API RESTful funcional, atendendo aos principais requisitos definidos nas etapas iniciais do projeto.</p>
 
-Durante os testes realizados, foi possível validar o correto funcionamento das operações de CRUD (Create, Read, Update e Delete) para todas as entidades do sistema, incluindo fabricantes, categorias, veículos, clientes e aluguéis.
+<p align="justify">Durante os testes realizados, foi possível validar o correto funcionamento das operações de CRUD (Create, Read, Update e Delete) para todas as entidades do sistema, incluindo fabricantes, categorias, veículos, clientes e aluguéis.</p>
 
 Além disso, foram testadas regras de negócio importantes, como:
 
@@ -36,12 +36,12 @@ Dessa forma, o sistema apresenta conformidade com os requisitos propostos, demon
 
 ## Conclusões
 
-O sistema desenvolvido mostrou-se eficaz no atendimento às necessidades básicas de uma locadora de veículos, permitindo o gerenciamento estruturado de dados e a execução de operações essenciais de forma organizada e consistente.
+<p align="justify">O sistema desenvolvido mostrou-se eficaz no atendimento às necessidades básicas de uma locadora de veículos, permitindo o gerenciamento estruturado de dados e a execução de operações essenciais de forma organizada e consistente.</p>
 
-A utilização de tecnologias como ASP.NET Core e Entity Framework Core contribuiu para o desenvolvimento de uma aplicação robusta, com boa organização de código e facilidade de manutenção.
+<p align="justify">A utilização de tecnologias como ASP.NET Core e Entity Framework Core contribuiu para o desenvolvimento de uma aplicação robusta, com boa organização de código e facilidade de manutenção.</p>
 
-Além disso, a implementação de regras de negócio e validações garantiu maior confiabilidade no sistema, evitando inconsistências e erros durante a manipulação dos dados.
+<p align="justify">Além disso, a implementação de regras de negócio e validações garantiu maior confiabilidade no sistema, evitando inconsistências e erros durante a manipulação dos dados.</p>
 
-De forma geral, o projeto permitiu a aplicação prática de conceitos fundamentais de desenvolvimento backend, como criação de APIs REST, modelagem de banco de dados e integração entre aplicação e banco relacional.
+<p align="justify">De forma geral, o projeto permitiu a aplicação prática de conceitos fundamentais de desenvolvimento backend, como criação de APIs REST, modelagem de banco de dados e integração entre aplicação e banco relacional.</p>
 
-Como possível evolução, o sistema pode ser expandido com funcionalidades adicionais, como autenticação de usuários, controle de permissões e integração com interfaces front-end.
+<p align="justify">Como possível evolução, o sistema pode ser expandido com funcionalidades adicionais, como autenticação de usuários, controle de permissões e integração com interfaces front-end.</p>
