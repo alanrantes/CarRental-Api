@@ -102,6 +102,44 @@ Esta seção apresenta exemplos de requisições utilizadas para testar os endpo
   "telefone": "31999999999"
 }
 ```
+
+### 🔹Alugueis
+
+**POST** `/api/Alugueis`
+
+```json
+{
+  "idAluguel": 0,
+  "dataRetirada": "2026-04-26T15:14:38",
+  "dataPrevistaDevolucao": "2026-04-30T15:14:38",
+  "dataDevolucao": null,
+  "quilometragemInicial": 31000,
+  "quilometragemFinal": null,
+  "valorDiaria": 90.00,
+  "valorTotal": 360.00,
+  "status": "Ativo",
+  "idCliente": 1,
+  "idVeiculo": 4
+}
+```
+**PUT** `/api/Alugueis/{id}`
+
+```json
+{
+  "idAluguel": 1,
+  "dataRetirada": "2026-04-26T15:14:38",
+  "dataPrevistaDevolucao": "2026-04-30T15:14:38",
+  "dataDevolucao": "2026-04-30T15:14:38",
+  "quilometragemInicial": 31000,
+  "quilometragemFinal": 31500,
+  "valorDiaria": 90.00,
+  "valorTotal": 360.00,
+  "status": "Finalizado",
+  "idCliente": 1,
+  "idVeiculo": 4
+}
+```
+
 ---
 
 ### Observações
