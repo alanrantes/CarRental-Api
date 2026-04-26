@@ -119,7 +119,7 @@ Esta seção apresenta exemplos de requisições utilizadas para testar os endpo
   "valorTotal": 360.00,
   "status": "Ativo",
   "idCliente": 1,
-  "idVeiculo": 4
+  "idVeiculo": 1
 }
 ```
 **PUT** `/api/Alugueis/{id}`
@@ -136,7 +136,7 @@ Esta seção apresenta exemplos de requisições utilizadas para testar os endpo
   "valorTotal": 360.00,
   "status": "Finalizado",
   "idCliente": 1,
-  "idVeiculo": 4
+  "idVeiculo": 1
 }
 ```
 
